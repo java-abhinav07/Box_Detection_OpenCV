@@ -26,10 +26,10 @@ def process(img_path):
         x_move, y_move = cursor.getMove()
         cursor.xcoor += x_move
         cursor.ycoor += y_move
-
-    if path[-1][0] != width - 1 and path[-1][1] != length - 1:
-        print(-1)
+    if path:
+        if path[-1][0] != width - 1 and path[-1][1] != length - 1:
+            print(-1)
     return path
 
 
-print(process(r"C:\Users\javaa\PycharmProjects\uas_task\Test Cases\testcase5.PNG"))
+# print(process(r"C:\Users\javaa\PycharmProjects\uas_task\Test Cases\testcase2.PNG"))

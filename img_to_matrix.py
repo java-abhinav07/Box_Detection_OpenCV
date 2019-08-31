@@ -6,7 +6,7 @@ import box_extraction
 from matplotlib import pyplot as plt
 
 
-def return_matrix(path, centre=r"C:\Users\javaa\PycharmProjects\uas_task\Test Cases\blank_template.PNG", left=r"C:\Users\javaa\PycharmProjects\uas_task\Test Cases\left_temp.PNG", right=r"C:\Users\javaa\PycharmProjects\uas_task\Test Cases\template2.PNG"):
+def return_matrix(path, centre=r"C:\Users\javaa\PycharmProjects\uas_task\Templates\blank_template.PNG", left=r"C:\Users\javaa\PycharmProjects\uas_task\Templates\left_temp.PNG", right=r"C:\Users\javaa\PycharmProjects\uas_task\Templates\template2.PNG"):
     img_rgb = cv2.imread(path)
     img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
 
@@ -78,23 +78,11 @@ def return_matrix(path, centre=r"C:\Users\javaa\PycharmProjects\uas_task\Test Ca
             final[coordinate[0]][coordinate[1]] = '/'
         else:
             final[coordinate[0]][coordinate[1]] = ' '
-
-    return final
-
     # for debugging
     # cv2.imwrite('res.png', img_rgb)
 
-
-# print(return_matrix(r"C:\Users\javaa\PycharmProjects\uas_task\Test Cases\testcase2.PNG"))
-
+    return final
 
 
 
-
-
-
-
-
-
-
-
+#print(return_matrix(r"C:\Users\javaa\PycharmProjects\uas_task\Test Cases\testcase2.PNG"))
