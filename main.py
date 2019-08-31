@@ -1,13 +1,12 @@
 import numpy as np
 from Pointer import Pointer
 from mirror import Switch
+from img_to_matrix import return_matrix
 
 
-def process(ar):
-    arr = []
-    for item in ar:
-        arr.append(list(item))
-    matrix = np.array(arr)
+def process(img_path):
+
+    matrix = return_matrix(img_path)
     length, width = matrix.shape
     path = []
     cursor = Pointer()
@@ -28,7 +27,9 @@ def process(ar):
         cursor.xcoor += x_move
         cursor.ycoor += y_move
 
+    if path[-1][0] != width - 1 and path[-1][1] != length - 1:
+        print(-1)
     return path
 
 
-
+print(process(r"C:\Users\javaa\PycharmProjects\uas_task\Test Cases\testcase5.PNG"))
