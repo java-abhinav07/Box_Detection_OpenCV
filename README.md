@@ -11,6 +11,10 @@ m_row,n_col<100
 
 # Working with the tool
 Use the main program by calling the "process" function which returns a list of coordinates traversed by the microwaves. The function takes the image path as a raw string argument. The image must be an excel sheet grid, since template matching is used to detect various objects from the same. In order to use a random grid the use of proper constants and templates must be done in the image_to_matrix file to achieve correct results. 
+For the purposes of the given testcases, use the templates as follows:
+1. Path of "blank_template" in the templates folder for centre
+2. Path of "left_temp" in the templates folder for left
+3. Path of "template2" in the templates folder for right
 
 # Future prospect and extension
 Since code uses template matching, scaling and random grids often cause a problem, currently working on OCR and box detection using ML models to achieve the same results more efficiently.
